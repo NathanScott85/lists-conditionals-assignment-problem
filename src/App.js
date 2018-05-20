@@ -3,6 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = {
+    userInput: ''
+  }
+ inputHandler = (event) => 
+ {
+  this.setState({userInput: event.target.value});
+ }
+
   render() {
     return (
       <div className="App">
@@ -24,7 +32,10 @@ class App extends Component {
         <p>Hint: Keep in mind that JavaScript strings are basically arrays!</p>
         
         </p>
-        <input/>
+        <hr/>
+        <input type='text' onChange={this.inputHandler} value={this.state.userInput}/>
+
+        <p> </p>
       </div>
     );
   }
