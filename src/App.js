@@ -31,7 +31,7 @@ class App extends Component {
         <hr/>
         <input type='text' onChange={this.inputHandler} value={this.state.userInput}/>
 
-        <p> </p>
+        <p> {this.state.userInput}</p>
       </div>
     );
   }
